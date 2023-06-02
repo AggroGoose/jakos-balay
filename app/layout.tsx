@@ -1,4 +1,5 @@
 import "./globals.css";
+import SideNav from "./sideNav";
 import UserNav from "./userNav";
 import { Mulish } from "next/font/google";
 
@@ -16,9 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={mulish.className}>
-        <UserNav />
-        {children}
+      <body className={mulish.className + "  maingrid"}>
+        <SideNav className="sidenav " />
+        <main className="contentmain">
+          <UserNav />
+          {children}
+        </main>
       </body>
     </html>
   );

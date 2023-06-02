@@ -25,3 +25,29 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.logo {
+  aspect-ratio: 108 / 105;
+}
+
+.maingrid {
+  display: grid;
+  grid-template-columns: 156px 1fr;
+}
+
+.sidenav {
+  grid-column: 1/2;
+  width: 156px;
+  height: 100vh;
+  overflow: auto;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.sidenav::-webkit-scrollbar {
+  display: none;
+}
+
+.contentmain {
+  grid-column: 2/3;
+}
