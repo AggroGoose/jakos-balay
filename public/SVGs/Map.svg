@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g>
+    <polygon class="cls-1" points="127.49 34.11 127.49 114.99 100.85 123.07 75.57 114.99 50.78 123.07 22.51 114.99 22.51 34.11 50.78 41.51 75.57 34.11 104.88 40.7 127.49 34.11"/>
+    <path class="cls-1" d="m104.88,83.5l11.31,13.73-11.31-13.73Z"/>
+    <path class="cls-1" d="m116.19,83.5l-11.31,13.73,11.31-13.73Z"/>
+    <ellipse cx="39.8" cy="77.82" rx="3.64" ry="2.22" transform="translate(-47.1 87.15) rotate(-69.05)"/>
+    <ellipse cx="45.38" cy="67.99" rx="3.64" ry="2.22" transform="translate(-36.19 73.3) rotate(-60)"/>
+    <ellipse cx="54.15" cy="60.98" rx="3.84" ry="2.28" transform="translate(-19.27 25.48) rotate(-22.59)"/>
+    <ellipse cx="64.51" cy="60.98" rx="2.28" ry="3.84" transform="translate(-23.33 73.79) rotate(-51.68)"/>
+    <ellipse cx="72.59" cy="68.92" rx="2.28" ry="3.84" transform="translate(-26.5 83.14) rotate(-51.68)"/>
+    <ellipse cx="78.9" cy="78.59" rx="2.28" ry="3.84" transform="translate(-31.68 91.76) rotate(-51.68)"/>
+    <ellipse cx="87.31" cy="86.19" rx="2.28" ry="3.84" transform="translate(-34.45 101.25) rotate(-51.68)"/>
+    <ellipse cx="97.76" cy="90.36" rx="3.84" ry="2.28" transform="translate(-5.43 6.25) rotate(-3.56)"/>
+  </g>
+  <path d="m75,0C33.58,0,0,33.58,0,75s33.58,75,75,75,75-33.58,75-75S116.42,0,75,0Zm0,144.1c-38.16,0-69.1-30.94-69.1-69.1S36.84,5.9,75,5.9s69.1,30.94,69.1,69.1-30.93,69.1-69.1,69.1Z"/>
+</svg>

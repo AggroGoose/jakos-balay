@@ -1,4 +1,5 @@
 import "./globals.css";
+import UserNav from "./userNav";
 import { Mulish } from "next/font/google";
 
 const mulish = Mulish({ subsets: ["latin"] });
@@ -15,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={mulish.className}>{children}</body>
+      <body className={mulish.className}>
+        <UserNav />
+        {children}
+      </body>
     </html>
   );
 }
