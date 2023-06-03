@@ -30,6 +30,13 @@ body {
   aspect-ratio: 108 / 105;
 }
 
+.imagefill {
+  width: 100%;
+  aspect-ratio: 2/1;
+  position: relative;
+  left: 0;
+}
+
 .maingrid {
   display: grid;
   grid-template-columns: 156px 1fr;

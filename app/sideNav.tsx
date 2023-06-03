@@ -28,31 +28,49 @@ export default function SideNav({ className }: { className?: string }) {
       <nav>
         <ul className={"flex flex-col gap-3.5 text-blue-400"}>
           <li>
-            <Hut className={svgClass} />
+            <button>
+              <Hut className={svgClass} />
+            </button>
           </li>
           <li>
-            <Map className={svgClass} />
+            <button>
+              <Map className={svgClass} />
+            </button>
           </li>
           <li>
-            <Coffee className={svgClass} />
+            <button>
+              <Coffee className={svgClass} />
+            </button>
           </li>
           <li>
-            <Book className={svgClass} />
+            <button>
+              <Book className={svgClass} />
+            </button>
           </li>
           <li>
-            <Chef className={svgClass} />
+            <button>
+              <Chef className={svgClass} />
+            </button>
           </li>
           <li>
-            <Airplane className={svgClass} />
+            <button>
+              <Airplane className={svgClass} />
+            </button>
           </li>
           <li>
-            <Campfire className={svgClass} />
+            <button>
+              <Campfire className={svgClass} />
+            </button>
           </li>
           <li>
-            <Backpack className={svgClass} />
+            <button>
+              <Backpack className={svgClass} />
+            </button>
           </li>
           <li>
-            <TreeHammock className={svgClass} />
+            <button>
+              <TreeHammock className={svgClass} />
+            </button>
           </li>
         </ul>
       </nav>

@@ -8,19 +8,20 @@ export default function UserNav() {
   const [signInWithGoogle] = useSignInWithGoogle(auth);
   console.log(user);
   return (
-    <>
+    <div className="fixed top-6 right-6 z-50">
       {user ? (
         <button onClick={() => auth.signOut()}>
           <Image
             src={user.photoURL || ""}
-            height={100}
-            width={100}
+            height={72}
+            width={72}
+            className={"rounded-full border-4 border-yellow-400"}
             alt={"User Profile Picture"}
           />
         </button>
       ) : (
         <button onClick={() => signInWithGoogle()}>Not Signed In</button>
       )}
-    </>
+    </div>
   );
 }
