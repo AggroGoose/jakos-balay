@@ -9,6 +9,7 @@ export default function Home() {
             src={"/IslandHutCover.png"}
             fill={true}
             alt={"Beach hut stands on a quiet beach at sunset."}
+            priority={true}
           />
         </div>
         <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex p-24">

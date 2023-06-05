@@ -1,6 +1,7 @@
+import AuthProvider from "./AuthProvider";
 import "./globals.css";
-import SideNav from "./sideNav";
-import UserNav from "./userNav";
+import SideNav from "./Nav/sideNav";
+import UserNav from "./Nav/userNav";
 import { Mulish } from "next/font/google";
 
 const mulish = Mulish({ subsets: ["latin"] });
@@ -16,14 +17,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={mulish.className + "  maingrid"}>
-        <SideNav className="sidenav " />
-        <main className="contentmain">
-          <UserNav />
-          {children}
-        </main>
-      </body>
-    </html>
+    <AuthProvider>
+      <html lang="en">
+        <body className={mulish.className + "  maingrid"}>
+          <SideNav className="sidenav " />
+          <main className="contentmain">
+            <UserNav />
+            {children}
+          </main>
+        </body>
+      </html>
+    </AuthProvider>
   );
 }
