@@ -28,7 +28,8 @@
     "globals.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "app/api/notion/TAGSync/route.js"
   ],
   "exclude": ["node_modules"]
 }

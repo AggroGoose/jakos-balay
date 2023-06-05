@@ -3,9 +3,7 @@ import type { NextAuthOptions } from "next-auth";
 import EmailProvider from "next-auth/providers/email";
 import GoogleProvider from "next-auth/providers/google";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
-import { PrismaClient } from "@prisma/client";
-
-const prisma: PrismaClient = new PrismaClient();
+import prisma from "@/lib/prisma/client";
 
 const googleID = process.env.GOOGLE_CLIENT || "";
 const googleSecret = process.env.GOOGLE_SECRET || "";

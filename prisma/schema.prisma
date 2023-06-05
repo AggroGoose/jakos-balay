@@ -49,7 +49,7 @@ model Post {
   title           String
   slug            String    @unique
   summary         String?   @db.Text
-  featureImg      String?    
+  featureImg      String?   @db.Text 
   audioTrack      String?
   memberOnly      Boolean   @default(false)
   datePublished   DateTime  @default(now())
