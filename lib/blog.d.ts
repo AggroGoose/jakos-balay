@@ -1,3 +1,5 @@
+// These are the shapes of the objects stored in the DB
+
 export type EmbedObject = {
   url: string;
   id?: string;
@@ -5,7 +7,7 @@ export type EmbedObject = {
   type: "twitter" | "instagram" | "other";
 };
 
-type ImageObject = {
+export type ImageObject = {
   url: string;
   caption: RichTextArr;
   alt: string;
@@ -29,7 +31,9 @@ export type UnparsedListItem = {
   group?: number;
 };
 
-type RichTextArr = Array<{
+export type RichTextArr = Array<RichTextElem>;
+
+export type RichTextElem = {
   content: string;
   emphasis: {
     bold: boolean;
@@ -38,23 +42,25 @@ type RichTextArr = Array<{
     strikethrough: boolean;
   };
   link: string | null;
-}>;
+};
 
-type TitleObject = {
+export type TitleObject = {
   content: string;
 };
 
-type ToggleDrop = {
+export type ToggleDrop = {
   title: string;
   content: RichText;
 };
 
-type VideoObject = {
+export type VideoObject = {
   url: string;
   caption: RichTextArr | never[];
   id?: string;
   type: "internal" | "external" | "youtube";
 };
+
+// Basic Catch All Block for DB
 
 export type BlogBlock = {
   id: string | number;
@@ -85,6 +91,53 @@ export type BlogBlock = {
     | VideoObject
     | null;
 };
+
+// Targeted blocks focused on specific elements.
+
+export type HeadBlock = {
+  id: string | number;
+  parentId: string | number;
+  type: "h1" | "h2" | "h3";
+  content: TitleObject;
+};
+export type ListBlock = {
+  id: string | number;
+  parentId: string | number;
+  type: "ol" | "ul";
+  content: ListObject;
+};
+export type TextBlock = {
+  id: string | number;
+  parentId: string | number;
+  type: "p" | "blockquote" | "callout";
+  content: RichTextArr;
+};
+export type ImgBlock = {
+  id: string | number;
+  parentId: string | number;
+  type: "img";
+  content: ImageObject;
+};
+export type EmbedBlock = {
+  id: string | number;
+  parentId: string | number;
+  type: "embed";
+  content: EmbedObject;
+};
+export type VidBlock = {
+  id: string | number;
+  parentId: string | number;
+  type: "video";
+  content: VideoObject;
+};
+export type ToggleBlock = {
+  id: string | number;
+  parentId: string | number;
+  type: "toggle";
+  content: ToggleObject;
+};
+
+// These are the shapes of the objects given by Notion
 
 export type DbResults = {
   object: string;

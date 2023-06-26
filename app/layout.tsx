@@ -1,5 +1,5 @@
 import AuthProvider from "./AuthProvider";
-import "./globals.css";
+import "@/lib/styles/globals.scss";
 import SideNav from "./Nav/sideNav";
 import UserNav from "./Nav/userNav";
 import { Mulish } from "next/font/google";
@@ -19,9 +19,9 @@ export default function RootLayout({
   return (
     <AuthProvider>
       <html lang="en">
-        <body className={mulish.className + "  maingrid"}>
-          <SideNav className="sidenav " />
-          <main className="contentmain">
+        <body className={mulish.className + "  main"}>
+          <SideNav className="main-nav" />
+          <main className="main-content">
             <UserNav />
             {children}
           </main>

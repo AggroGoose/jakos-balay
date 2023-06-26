@@ -39,6 +39,7 @@ export async function GET() {
         content: null,
       };
       if (block["bulleted_list_item"]) {
+        console.log("UL Item Pushed at index: " + i);
         UlArr.push({
           type: "unordered",
           index: i,
@@ -130,6 +131,7 @@ export async function GET() {
       BlockArr.push(blockObj);
     });
 
+    console.log("Parsing the Ordered List");
     const OlParse = ListParse(OlArr);
 
     for (const [key, value] of Object.entries(OlParse)) {
@@ -143,8 +145,10 @@ export async function GET() {
       });
       BlockArr[referenceValue].type = "ol";
       BlockArr[referenceValue].content = newOlObj;
+      console.log("Created Ordered List Block");
     }
 
+    console.log("Parsing the Unordered List Items");
     const UlParse = ListParse(UlArr);
 
     for (const [key, value] of Object.entries(UlParse)) {
@@ -158,6 +162,7 @@ export async function GET() {
       });
       BlockArr[referenceValue].type = "ul";
       BlockArr[referenceValue].content = newUlObj;
+      console.log("Created Unordered List Block");
     }
     try {
       const client = await serverPromise.catch((error) =>

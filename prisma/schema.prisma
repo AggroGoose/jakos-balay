@@ -35,6 +35,8 @@ model Category {
   description     String?   @db.Text
   posts           Post[]
   subCategories   SubCategory[]
+
+  @@unique([id, title])
 }
 
 model Permission {
@@ -60,12 +62,14 @@ model Post {
   numShare        Int       @default(0)
   views           Int       @default(0)
 
-  category        Category  @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  category        Category  @relation(fields: [categoryId, categoryName], references: [id, title], onDelete: Cascade)
   categoryId      String
+  categoryName    String 
   likes           PostLike[]
   saves           PostSave[]
-  subCategory     SubCategory  @relation(fields: [subCategoryId], references: [id], onDelete: Cascade)
-  subCategoryId   String  
+  subCategory     SubCategory  @relation(fields: [subCategoryId, subCategoryName], references: [id, title], onDelete: Cascade)
+  subCategoryId   String
+  subCategoryName String
   tags            PostTag[]
 }
 
@@ -90,8 +94,9 @@ model PostSave {
 model PostTag {
   post            Post  @relation(fields: [postId], references: [id])
   postId          String
-  tag             Tag  @relation(fields: [tagId], references: [id])
+  tag             Tag  @relation(fields: [tagId, tagName], references: [id, title])
   tagId           String
+  tagName         String
 
   @@id([postId, tagId])
 }
@@ -128,6 +133,8 @@ model SubCategory {
   posts           Post[]
   categoryId      String?
   category        Category?  @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@unique([id, title])
 }
 
 model Tag {
@@ -135,6 +142,8 @@ model Tag {
   title           String
   description     String?   @db.Text
   posts           PostTag[]
+
+  @@unique ([id, title])
 }
 
 model User {

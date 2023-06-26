@@ -1,7 +1,8 @@
+import ContentBuilder from "@/components/contentBuilder";
 import { BlogBlock } from "@/lib/blog";
 import prisma from "@/lib/prisma/client";
 import type { Post } from "@prisma/client";
-import Image from "next/image";
+import BlogHead from "./header/blogHead";
 
 interface PostContent extends Post {
   content: BlogBlock[];
@@ -26,17 +27,19 @@ export default async function BlogPage({
 
   const post = (await response.json()) as PostContent;
 
-  console.log(post);
   return (
-    <>
-      <Image
-        src={post?.featureImg || ""}
-        priority={true}
-        height={400}
-        width={800}
-        alt=""
+    <main>
+      <BlogHead
+        title={post.title}
+        subCategoryName={post.subCategoryName}
+        datePublished={post.datePublished}
+        summary={post.summary}
+        featureImg={post.featureImg}
       />
-      <h1>Welcome to the {post.title} Jungle!</h1>
-    </>
+      <ContentBuilder
+        className="blog-content primary-grid"
+        content={post.content}
+      />
+    </main>
   );
 }

@@ -22,6 +22,9 @@ export async function GET(
 
   const page = await prisma.post.findUnique({
     where: { slug: slug },
+    include: {
+      tags: true,
+    },
   });
 
   const client = await serverPromise.catch((error) =>

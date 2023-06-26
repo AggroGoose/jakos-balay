@@ -1,0 +1,11 @@
+.primary-grid {
+  display: grid;
+  margin: 0 auto;
+  gap: 24px 0;
+  grid-template-columns:
+    [full-start] 1fr [wide-start] 90px [main-start] 90px [min-start] repeat(
+      6,
+      90px
+    )
+    [min-end] 90px [main-end] 90px [wide-end] 1fr[full-end];
+}

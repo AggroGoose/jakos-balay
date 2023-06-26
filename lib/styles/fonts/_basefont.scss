@@ -1,0 +1,31 @@
+body {
+  font-size: var(--font-regular);
+  font-weight: var(--font-weight);
+  line-height: var(--font-height);
+  letter-spacing: var(--font-space);
+  color: var(--font-color);
+}
+
+a {
+  text-decoration: none;
+  word-break: break-word;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: var(--font-head-space);
+  line-height: var(--font-head-height);
+  font-weight: var(--font-head-weight);
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.875rem;
+}
+h3 {
+  font-size: 1.625rem;
+}

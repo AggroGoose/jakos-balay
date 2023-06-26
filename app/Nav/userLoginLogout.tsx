@@ -12,12 +12,11 @@ export function UserLoginLogout() {
 
   if (status === "authenticated") {
     return (
-      <button onClick={() => signOut()}>
+      <button className="main-usernav--button" onClick={() => signOut()}>
         <Image
           src={session?.user?.image ?? "/Knuckles.png"}
-          height={72}
-          width={72}
-          className={"rounded-full border-4 border-yellow-400"}
+          fill={true}
+          className={"main-usernav--img"}
           alt={"User Profile Picture"}
         />
       </button>
@@ -26,7 +25,7 @@ export function UserLoginLogout() {
 
   return (
     <button
-      className="bg-yellow-400 pt-1 pb-1 pr-2 pl-2 border-2 border-black font-bold text-black rounded-lg"
+      className="main-usernav--login bg-yellow-400 pt-1 pb-1 pr-2 pl-2 border-2 border-black font-bold text-black rounded-lg"
       onClick={() => signIn()}
     >
       Sign In

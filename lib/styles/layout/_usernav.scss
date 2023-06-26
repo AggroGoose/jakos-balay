@@ -1,0 +1,33 @@
+.main-usernav {
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  pointer-events: all;
+
+  button {
+    cursor: pointer;
+  }
+
+  &--button {
+    background: none;
+    border-radius: 100%;
+    height: 72px;
+    width: 72px;
+    padding: 0;
+    margin: 0;
+  }
+
+  &--img {
+    border-radius: 100%;
+    border: 4px solid var(--primary-color);
+  }
+
+  &--login {
+    background-color: var(--primary-color);
+    font-weight: var(--font-bold-weight);
+    font-size: var(--font-normal);
+    border-radius: 8px;
+    border: 3px solid black;
+    padding: 8px 16px;
+  }
+}

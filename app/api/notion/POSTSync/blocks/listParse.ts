@@ -17,6 +17,8 @@ export function ListParse(list: Array<UnparsedListItem>) {
         groupLevel++;
         groupObject[groupLevel] = [item];
       }
+    } else if (i === 0) {
+      groupObject[groupLevel] = [item];
     }
   });
 

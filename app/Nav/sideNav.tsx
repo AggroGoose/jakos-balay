@@ -12,16 +12,13 @@ import {
 } from "@/lib/svg/NavSVGs";
 
 export default function SideNav({ className }: { className?: string }) {
-  const svgClass =
-    "fill-current w-16 h-16 m-auto text-blue-800 hover:text-blue-500";
+  const svgClass = "main-nav--svg";
   return (
-    <div
-      className={className + "flex flex-col gap-8 bg-yellow-400 fixed top-0"}
-    >
-      <button className="w-full">
+    <div className={className}>
+      <button>
         <JakosBalayLogo
           className={
-            "text-blue-800 fill-current logo ml-auto mr-auto mt-6 w-28 hover:text-blue-500"
+            "main-nav--logo text-blue-800 fill-current logo ml-auto mr-auto mt-6 w-28 hover:text-blue-500"
           }
         />
       </button>

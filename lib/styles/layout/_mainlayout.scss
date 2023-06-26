@@ -1,0 +1,16 @@
+.main {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+
+  &-nav {
+    grid-column: 1/2;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+  }
+
+  &-content {
+    grid-column: 2/3;
+    min-height: 100vh;
+  }
+}
