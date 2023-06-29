@@ -1,0 +1,8 @@
+.blog-side {
+  grid-column: side-start/side-end;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+}

@@ -4,10 +4,10 @@ import RichText from "./helpers/richText";
 export default function CallOut({ block }: { block: TextBlock }) {
   const { content } = block;
   return (
-    <p>
+    <div className="blocks-callout">
       {content.map((section, i) => (
         <RichText elem={section} key={i} />
       ))}
-    </p>
+    </div>
   );
 }

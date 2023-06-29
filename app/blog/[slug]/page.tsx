@@ -3,6 +3,7 @@ import { BlogBlock } from "@/lib/blog";
 import prisma from "@/lib/prisma/client";
 import type { Post } from "@prisma/client";
 import BlogHead from "./header/blogHead";
+import BlogSideContent from "./side/blogSideContent";
 
 interface PostContent extends Post {
   content: BlogBlock[];
@@ -36,10 +37,13 @@ export default async function BlogPage({
         summary={post.summary}
         featureImg={post.featureImg}
       />
-      <ContentBuilder
-        className="blog-content primary-grid"
-        content={post.content}
-      />
+      <div className="side-content-grid">
+        <ContentBuilder
+          className="blog-content blog-content-grid"
+          content={post.content}
+        />
+        <BlogSideContent />
+      </div>
     </main>
   );
 }

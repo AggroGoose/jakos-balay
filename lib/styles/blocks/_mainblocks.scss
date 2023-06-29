@@ -1,0 +1,23 @@
+.blocks {
+  &-callout {
+    background-color: var(--secondary-color);
+    padding: 24px;
+    text-align: center;
+    font-size: var(--font-large);
+  }
+
+  &-quote {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+
+    p {
+      font-size: var(--font-large);
+    }
+
+    &--svg {
+      height: 50px;
+      width: 50px;
+    }
+  }
+}

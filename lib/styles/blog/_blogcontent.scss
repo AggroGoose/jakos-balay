@@ -1,6 +1,15 @@
 .blog-content {
+  grid-column: content-start/content-end;
+
   & > * {
     margin: 0;
-    grid-column: wide-start/wide-end;
+    grid-column: main-start/main-end;
+  }
+
+  &--callout {
+    background-color: var(--secondary-color);
+    padding: 24px;
+    text-align: center;
+    font-size: var(--font-large);
   }
 }
